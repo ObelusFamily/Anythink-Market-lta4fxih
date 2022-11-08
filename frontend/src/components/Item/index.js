@@ -19,6 +19,8 @@ const mapDispatchToProps = (dispatch) => ({
   onUnload: () => dispatch({ type: ITEM_PAGE_UNLOADED }),
 });
 
+export const DEFAULT_PLACEHOLDER_IMG = "/placeholder.png";
+
 class Item extends React.Component {
   componentWillMount() {
     this.props.onLoad(
@@ -50,7 +52,7 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={this.props.item.image}
+                src={this.props.item.image || DEFAULT_PLACEHOLDER_IMG}
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
