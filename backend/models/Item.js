@@ -61,6 +61,4 @@ ItemSchema.methods.toJSONFor = function (user) {
   };
 };
 
-export const DEFAULT_PLACEHOLDER_IMG = "/placeholder.png";
-
 mongoose.model("Item", ItemSchema);
